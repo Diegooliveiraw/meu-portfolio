@@ -1,0 +1,249 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS, VARIÁVEIS E CONFIGURAÇÃO DA PÁGINA (BODY)
+   ========================================================================== */
+
+:root {
+    /* Paleta de Cores (Estilo Dark Mode Moderno) */
+    --bg-principal: #0f172a;    /* Azul escuro profundo */
+    --bg-card: #1e293b;         /* Azul acinzentado para os cards */
+    --texto-claro: #f8fafc;     /* Branco suave para textos principais */
+--texto-mutado: #94a3b8;        /* Cinza para textos secundários */
+    --cor-destaque: #38bdf8;    /* Azul ciano brilhante para links/destaques */
+    --cor-hover: #0284c7;       /* Azul mais escuro para estados de hover */
+
+    /* Tipografia */
+    --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset básico de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização da raiz da página */
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    font-family: var(--fonte);
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+/* ==========================================================================
+   2. HEADER & NAVEGAÇÃO (<header> e <nav>)
+   ========================================================================== */
+
+header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Elemento de identidade (.logo) */
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--cor-destaque);
+}
+
+/* Lista de links do menu (<ul>) */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Links individuais (<a>) */
+nav ul li a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Efeito Hover nos links do menu */
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* ==========================================================================
+   3. HERO SECTION (<section id="hero">)
+   ========================================================================== */
+
+#hero {
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* Título principal (<h1>) */
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Parágrafo de introdução (<p>) */
+#hero p {
+    font-size: 1.2rem;
+    color: var(--texto-mutado);
+    margin-bottom: 30px;
+}
+
+/* Botão de Chamada para Ação (.btn) */
+.btn {
+    background-color: var(--cor-destaque);
+    color: var(--bg-principal);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+/* Efeito Hover do botão principal */
+.btn:hover {
+    background-color: var(--cor-hover);
+    color: var(--texto-claro);
+}
+
+
+/* ==========================================================================
+   4. SEÇÃO DE PROJETOS & GRID (<section id="projetos">)
+   ========================================================================== */
+
+#projetos {
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* Título da seção (<h2>) */
+#projetos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--cor-destaque);
+    padding-left: 10px;
+}
+
+/* Container do Grid dos Cards (.grid-projetos) */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+/* ==========================================================================
+   5. CARD DO PROJETO E SEU CONTEÚDO (.card-projeto)
+   ========================================================================== */
+
+/* Estrutura do Card */
+.card-projeto {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #334155;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Efeito de elevação do Card no Hover */
+.card-projeto:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+}
+
+/* Mini tag de contexto acima do título (.tag-tecnologia) */
+.tag-tecnologia {
+    font-size: 0.8rem;
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Título do Projeto (<h3>) */
+.card-projeto h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Descrição curta do projeto (<p>) */
+.card-projeto p {
+    color: var(--texto-mutated);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================================================
+   6. COMPONENTES DO CARD (BADGES E BOTÕES DE LINK)
+   ========================================================================== */
+
+/* Container das Badges (.projeto-badges) */
+.projeto-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+/* Badges de tecnologia individuais (<span>) */
+.projeto-badges span {
+    background-color: #334155;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #cbd5e1;
+}
+
+/* Container dos botões de ação (.projeto-links) */
+.projeto-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo base comum a ambos os botões (.btn-projeto) */
+.btn-projeto {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+/* Botão Principal (Geralmente link do GitHub) */
+.btn-projeto.principal {
+    background-color: #334155;
+    color: var(--texto-claro);
+    border: 1px solid #475569;
+}
+
+/* Hover do Botão Principal */
+.btn-projeto.principal:hover {
+    background-color: var(--cor-destaque);
+    color: var(--bg-principal);
+    border-color: var(--cor-destaque);
+}
+
+/* Botão Secundário (Geralmente link do Case Study) */
+.btn-projeto.secundario {
+    color: var(--texto-mutado);
+    border: 1px solid transparent;
+}
+
+/* Hover do Botão Secundário */
+.btn-projeto.secundario:hover {
+    color: var(--texto-claro);
+    text-decoration: underline;
+}
