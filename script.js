@@ -41,3 +41,28 @@ window.addEventListener("click", (event) => {
         modalClima.style.display = "none";
     }
 });
+
+
+// ==========================================================================
+// SCROLL SUAVE PARA OS LINKS DO MENU
+// ==========================================================================
+const linksMenu = document.querySelectorAll('nav ul li a[href^="#"]');
+
+linksMenu.forEach(link => {
+    link.addEventListener("click", function (event) {
+        // Previne o comportamento padrão do clique seco
+        event.preventDefault();
+
+        // Pega o ID do alvo (ex: "#projetos")
+        const idAlvo = this.getAttribute("href");
+        const secaoAlvo = document.querySelector(idAlvo);
+
+        if (secaoAlvo) {
+            // Desliza suavemente até a seção
+            secaoAlvo.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
