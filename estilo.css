@@ -148,6 +148,68 @@ nav ul li a:hover {
 
 
 /* ==========================================================================
+   4.5 SEÇÃO SOBRE MIM (<section id="sobre">)
+   ========================================================================== */
+
+#sobre {
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--cor-destaque);
+    padding-left: 10px;
+}
+
+#sobre p {
+    color: var(--texto-mutado);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.habilidades-container h3 {
+    font-size: 1.3rem;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+}
+
+/* Grid para organizar as três principais habilidades */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.habilidade-item {
+    background-color: var(--bg-card);
+    border: 1px solid #334155;
+    padding: 20px;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.habilidade-item:hover {
+    border-color: var(--cor-destaque);
+}
+
+.habilidade-item strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--cor-destaque);
+    margin-bottom: 8px;
+}
+
+.habilidade-item p {
+    font-size: 0.95rem;
+    color: var(--texto-mutado);
+    margin: 0;
+}
+
+
+/* ==========================================================================
    5. CARD DO PROJETO E SEU CONTEÚDO (.card-projeto)
    ========================================================================== */
 
