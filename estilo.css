@@ -210,6 +210,75 @@ nav ul li a:hover {
 
 
 /* ==========================================================================
+   4.8 SEÇÃO DE CONTATO (<section id="contato">)
+   ========================================================================== */
+
+#contato {
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--texto-claro);
+}
+
+#contato p {
+    color: var(--texto-mutado);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+/* Container para alinhar os cartões de contato */
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cartões clicáveis de contato */
+.card-contato {
+    background-color: var(--bg-card);
+    border: 1px solid #334155;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    text-decoration: none;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: left;
+}
+
+.card-contato:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+}
+
+.contato-icone {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-contato strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--texto-claro);
+    margin-bottom: 5px;
+}
+
+.card-contato p {
+    font-size: 0.9rem;
+    color: var(--texto-mutado);
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================================
    5. CARD DO PROJETO E SEU CONTEÚDO (.card-projeto)
    ========================================================================== */
 
