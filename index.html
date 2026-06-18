@@ -12,7 +12,7 @@
 
     <header>
         <nav>
-            <div class="logo">SeuNome.dev</div>
+            <div class="logo">DiegoOtavio.dev</div>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
@@ -22,7 +22,7 @@
     </header>
 
     <section id="hero">
-        <h1>Olá, eu sou [Seu Nome]</h1>
+        <h1>Olá, eu sou Diego Otavio</h1>
         <p>Desenvolvedor focado em criar soluções eficientes usando HTML, CSS, JavaScript e Python.</p>
         <a href="#projetos" class="btn">Ver Meus Projetos</a>
     </section>
@@ -47,13 +47,102 @@
 
                     <div class="projeto-links">
                         <a href="#" class="btn-projeto principal">Ver Código (GitHub)</a>
-                        <a href="#" class="btn-projeto secundario">Detalhes do Case</a>
+                        <a href="javascript:void(0)" id="abrir-case-financas" class="btn-projeto secundario">Detalhes do
+                            Case</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-projeto">
+                <div class="projeto-conteudo">
+                    <span class="tag-tecnologia">JavaScript Core</span>
+                    <h3>Dashboard de Clima em Tempo Real</h3>
+                    <p>Aplicação web que consome dados de uma API meteorológica global para fornecer previsões precisas
+                        baseadas na busca do usuário.</p>
+
+                    <div class="projeto-badges">
+                        <span>JavaScript ES6+</span>
+                        <span>Fetch API</span>
+                        <span>REST APIs</span>
+                        <span>HTML5/CSS3</span>
+                    </div>
+
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto principal">Ver Código (GitHub)</a>
+                        <a href="javascript:void(0)" id="abrir-case-clima" class="btn-projeto secundario">Detalhes do
+                            Case</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
+    <div id="modal-financas" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+
+            <h2>Case Study: Sistema de Controle Financeiro</h2>
+            <p class="modal-subtitulo">Uma solução Full-Stack para gestão e análise de gastos pessoais.</p>
+
+            <hr class="divisor">
+
+            <div class="modal-secao">
+                <h3>📌 O Desafio</h3>
+                <p>Centralizar o controle de despesas e receitas de forma simples, mas robusta. O principal problema era
+                    criar um sistema que calculasse o saldo em tempo real de forma confiável e que guardasse esses dados
+                    com segurança, evitando falhas ou perdas de registros.</p>
+            </div>
+
+            <div class="modal-secao">
+                <h3>💻 A Solução Técnica</h3>
+                <p>Desenvolvi o núcleo da aplicação em <strong>Python</strong>, responsável pela lógica matemática dos
+                    saldos e rotas de dados. Para persistir as informações, integrei um <strong>Banco de Dados</strong>
+                    relacional, garantindo a consistência das transações. A interface foi construída com <strong>HTML5,
+                        CSS3 e JavaScript</strong>, permitindo que a atualização dos gráficos e tabelas de fluxo de
+                    caixa aconteça de forma dinâmica e fluida.</p>
+            </div>
+
+            <div class="modal-secao">
+                <h3>🚀 O que aprendi</h3>
+                <p>Este projeto consolidou meu entendimento sobre arquitetura MVC (Model-View-Controller), manipulação
+                    de queries SQL e como gerenciar estados no Front-End para que batam exatamente com o que está salvo
+                    no Banco de Dados.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal-clima" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" id="fechar-clima">&times;</span>
+
+            <h2>Case Study: Dashboard de Clima</h2>
+            <p class="modal-subtitulo">Consumo de APIs REST e manipulação assíncrona de dados.</p>
+
+            <hr class="divisor">
+
+            <div class="modal-secao">
+                <h3>📌 O Desafio</h3>
+                <p>Criar uma interface que entregasse dados climáticos instantâneos sem que a página precisasse
+                    recarregar. O desafio técnico era lidar com requisições de rede de forma assíncrona, tratando
+                    possíveis erros (como cidades não encontradas ou falhas de conexão) para que o usuário não ficasse
+                    sem resposta.</p>
+            </div>
+
+            <div class="modal-secao">
+                <h3>💻 A Solução Técnico</h3>
+                <p>Utilizei a **Fetch API** do JavaScript com a sintaxe moderna de **async/await** para conectar a
+                    aplicação à API da OpenWeatherMap. Os dados retornados em formato JSON são tratados e injetados
+                    dinamicamente na tela alterando o DOM. Também implementei blocos de tratamento de erro (`try/catch`)
+                    para garantir uma experiência de usuário sem quebras (UX fluida).</p>
+            </div>
+
+            <div class="modal-secao">
+                <h3>🚀 O que aprendi</h3>
+                <p>Aprofundei significativamente meus conceitos sobre concorrência no JavaScript, manipulação do ciclo
+                    de vida de requisições HTTP (GET) e como componentizar o código para manter funções de busca
+                    separadas da lógica de renderização visual.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
